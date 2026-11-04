@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "current_edition": "free",
+  "notes": "A edição Free está planejada, mas ainda não deve ser gerada para distribuição. A edição Pro é o produto privado atual.",
+  "architecture": {
+    "stage": "2.3.9",
+    "module_paths": {
+      "core": "includes/Core",
+      "free": "includes/Free",
+      "pro": "includes/Pro",
+      "pro_admin": "includes/Pro/Admin",
+      "pro_woocommerce": "includes/Pro/WooCommerce",
+      "pro_mega_menu": "includes/Pro/MegaMenu",
+      "pro_licensing": "includes/Pro/Licensing"
+    },
+    "template_paths": {
+      "free": "templates/free",
+      "pro": "templates/pro",
+      "compatibility_wrappers": "templates"
+    },
+    "settings_groups": {
+      "free": [
+        "display",
+        "logos",
+        "cta",
+        "basic_colors",
+        "basic_mobile_drawer",
+        "basic_dimensions",
+        "theme_compatibility"
+      ],
+      "pro": [
+        "woocommerce_search_account_cart",
+        "advanced_search_results",
+        "mega_menu",
+        "smart_header",
+        "advanced_presets",
+        "import_export",
+        "private_updater_license"
+      ]
+    },
+    "settings_schema_paths": {
+      "free": "includes/Free/class-portus-header-free-settings.php",
+      "pro": "includes/Pro/Admin/class-portus-header-pro-settings.php"
+    },
+    "admin_extension_paths": {
+      "pro": "includes/Pro/Admin/class-portus-header-pro-admin.php"
+    },
+    "admin_view_paths": {
+      "pro": "includes/Pro/Admin/views"
+    },
+    "readme_paths": {
+      "free": "readme-free.txt",
+      "pro": "readme-pro.txt"
+    },
+    "license_notes": {
+      "free": "docs/FREE-LICENSE.md",
+      "pro": "docs/PRO-DISTRIBUTION.md"
+    },
+    "commercial_docs": {
+      "branding": "docs/BRANDING.md",
+      "store_listing": "docs/PRO-STORE-LISTING.md",
+      "customer_guide": "docs/CUSTOMER-GUIDE.md",
+      "release_notes": "docs/PRO-RELEASE-2.3.9.md",
+      "release_checklist": "docs/PRO-RELEASE-CHECKLIST.md",
+      "support_update_policy": "docs/SUPPORT-UPDATE-POLICY.md"
+    },
+    "asset_paths": {
+      "base_css": "assets/css/portus-header.css",
+      "pro_css": "assets/css/portus-header-pro.css",
+      "base_js": "assets/js/portus-header.js",
+      "pro_js": "assets/js/portus-header-pro.js"
+    },
+    "service_paths": {
+      "pro_woocommerce_search": "includes/Pro/WooCommerce/class-portus-header-product-search.php",
+      "pro_mega_menu": "includes/Pro/MegaMenu/class-portus-header-mega-menu.php",
+      "pro_license_manager": "includes/Pro/Licensing/class-portus-header-license-manager.php",
+      "pro_licensing_updater": "includes/Pro/Licensing/class-portus-header-updater.php"
+    },
+    "current_behavior": "A edição Pro continua ativa por padrão. A Free experimental agora possui smoke test de instalação limpa: o ZIP é gerado, extraído em ambiente temporário sem includes/Pro e carregado como edição Free.",
+    "next_step": "Instalar manualmente o ZIP Free experimental em um WordPress limpo real e revisar painel, shortcode, modo automático, menu desktop e drawer mobile antes de transformar a Free em candidata pública."
+  },
+  "build": {
+    "sources": [
+      "admin",
+      "assets",
+      "config",
+      "includes",
+      "docs",
+      "languages",
+      "templates",
+      "portus-header.php",
+      "readme.txt",
+      "uninstall.php"
+    ],
+    "exclude": {
+      "free": [
+        "includes/Pro",
+        "templates/pro",
+        "templates/account-dropdown.php",
+        "templates/mini-cart.php",
+        "templates/search-panel.php",
+        "assets/css/portus-header-pro.css",
+        "assets/js/portus-header-pro.js",
+        "assets/images/portus-header/banner-772x250.png",
+        "assets/images/portus-header/banner-1544x500.png",
+        "assets/images/portus-header/hero-portus-header-pro.png",
+        "assets/images/portus-header/product-cover-portus-header-pro.png",
+        "readme-pro.txt",
+        "docs",
+        "docs/BRANDING.md",
+        "docs/PRO-DISTRIBUTION.md",
+        "docs/PRO-STORE-LISTING.md",
+        "docs/CUSTOMER-GUIDE.md",
+        "docs/PRO-RELEASE-2.3.3.md",
+        "docs/PRO-RELEASE-2.3.4.md",
+        "docs/PRO-RELEASE-2.3.8.md",
+        "docs/PRO-RELEASE-2.3.9.md",
+        "docs/PRO-RELEASE-CHECKLIST.md",
+        "docs/SUPPORT-UPDATE-POLICY.md"
+      ]
+    }
+  },
+  "editions": {
+    "free": {
+      "status": "candidate",
+      "buildable": true,
+      "experimental_buildable": true,
+      "name": "Portus Header",
+      "slug": "portus-header",
+      "plugin_dir": "portus-header/",
+      "distribution": "wordpress.org candidate",
+      "license_target": "GPL-2.0-or-later compatible",
+      "positioning": "Header responsivo essencial para WordPress, sem dependência de builders premium.",
+      "allowed_features": [
+        "header_responsive",
+        "native_wp_menu",
+        "desktop_mobile_logo",
+        "basic_cta",
+        "automatic_or_shortcode_mode",
+        "page_inclusion_exclusion",
+        "sticky_header",
+        "basic_colors",
+        "basic_mobile_drawer",
+        "local_svg_assets"
+      ],
+      "excluded_pro_modules": [
+        "woocommerce_instant_search",
+        "advanced_search_history_recent_highlight",
+        "woocommerce_account_dropdown",
+        "woocommerce_bag_counter",
+        "mega_menu",
+        "smart_header",
+        "advanced_presets",
+        "import_export",
+        "private_updater",
+        "license_key",
+        "menu_item_badges_icons_visibility"
+      ]
+    },
+    "pro": {
+      "status": "current",
+      "buildable": true,
+      "name": "Portus Header Pro",
+      "slug": "portus-header-pro",
+      "plugin_dir": "portus-header/",
+      "distribution": "private zip",
+      "license_target": "commercial private distribution; GPL compatibility to be finalized before public sale",
+      "positioning": "Header avançado para Portus e clientes pagantes, com WooCommerce, mega menu, busca e painel profissional.",
+      "features": [
+        "all_free_features",
+        "woocommerce_instant_search",
+        "advanced_search_history_recent_highlight",
+        "woocommerce_account_dropdown",
+        "woocommerce_bag_counter",
+        "mega_menu",
+        "smart_header",
+        "advanced_presets",
+        "import_export",
+        "private_updater",
+        "license_key",
+        "menu_item_badges_icons_visibility"
+      ]
+    }
+  },
+  "build_context": {
+    "edition": "free",
+    "candidate": true
+  }
+}

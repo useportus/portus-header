@@ -1,0 +1,644 @@
+.portus-header-admin {
+	max-width: 1080px;
+}
+
+.portus-header-admin__intro {
+	max-width: 720px;
+	font-size: 15px;
+}
+
+.portus-header-admin__card {
+	padding: 24px;
+	margin: 20px 0;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+.portus-header-admin__toolbar {
+	position: sticky;
+	top: 32px;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 12px;
+	margin: 18px 0;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: rgb(255 255 255 / 96%);
+	box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+	backdrop-filter: blur(8px);
+}
+
+.portus-header-admin__tabs,
+.portus-header-admin__transfer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 7px;
+}
+
+.portus-header-admin__tabs button {
+	padding: 7px 11px;
+	border: 0;
+	border-radius: 5px;
+	background: transparent;
+	color: #1d2327;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.portus-header-admin__tabs button.is-active {
+	background: #00053a;
+	color: #fff;
+}
+
+.portus-header-admin__live-preview {
+	--preview-bg: #00053a;
+	--preview-text: #ffffff;
+	--preview-hover: #c0a821;
+	--preview-cta-bg: #c0a821;
+	--preview-cta-text: #00053a;
+	--preview-cta-hover-bg: #d3c45a;
+	--preview-search-icon: #c0a821;
+	--preview-account-icon: #c0a821;
+	--preview-cart-icon: #c0a821;
+	--preview-height: 82px;
+	--preview-menu-gap: 30px;
+	--preview-action-gap: 10px;
+	--preview-radius: 6px;
+	--preview-font-size: 15px;
+	display: grid;
+	gap: 12px;
+	padding: 14px;
+	border: 1px solid #dcdcde;
+	border-radius: 12px;
+	background: #f6f7f7;
+	box-shadow: 0 12px 28px rgb(0 5 58 / 10%);
+}
+
+.portus-header-admin__preview-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 0 2px;
+	color: #50575e;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.portus-header-admin__preview-top code {
+	padding: 4px 8px;
+	border-radius: 999px;
+	background: #fff;
+	color: #00053a;
+	font-size: 11px;
+	text-transform: none;
+}
+
+.portus-header-admin__preview-stage {
+	display: grid;
+	gap: 12px;
+}
+
+.portus-header-admin__preview-header {
+	display: flex;
+	align-items: center;
+	gap: var(--preview-menu-gap);
+	min-height: var(--preview-height);
+	padding: 14px 28px;
+	overflow: hidden;
+	border-radius: 10px;
+	background: var(--preview-bg);
+	color: var(--preview-text);
+	box-shadow: 0 12px 28px rgb(0 5 58 / 18%);
+	transition:
+		min-height 180ms ease,
+		background-color 180ms ease,
+		color 180ms ease,
+		gap 180ms ease;
+}
+
+.portus-header-admin__live-preview[data-preview-layout="centered"] .portus-header-admin__preview-header {
+	display: grid;
+	grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+}
+
+.portus-header-admin__live-preview[data-preview-layout="compact"] .portus-header-admin__preview-header {
+	padding-block: 8px;
+}
+
+.portus-header-admin__live-preview[data-preview-layout="cta"] .portus-header-admin__preview-header {
+	box-shadow: 0 16px 34px rgb(0 5 58 / 22%);
+}
+
+.portus-header-admin__preview-logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	min-width: 210px;
+	margin-right: auto;
+	color: var(--preview-hover);
+	line-height: 1;
+}
+
+.portus-header-admin__preview-logo-fallback {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.portus-header-admin__preview-logo-fallback svg {
+	display: block;
+	width: 58px;
+	height: 34px;
+	color: var(--preview-hover);
+}
+
+.portus-header-admin__preview-logo-fallback b {
+	color: var(--preview-text);
+	font-size: 30px;
+	font-weight: 900;
+	line-height: 1;
+}
+
+.portus-header-admin__preview-logo img {
+	display: block;
+	width: auto;
+	max-width: 150px;
+	height: auto;
+	max-height: 46px;
+	object-fit: contain;
+}
+
+.portus-header-admin__preview-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: clamp(16px, 3vw, var(--preview-menu-gap));
+	font-size: var(--preview-font-size);
+	font-weight: 700;
+}
+
+.portus-header-admin__preview-nav span {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	white-space: nowrap;
+}
+
+.portus-header-admin__preview-nav span:first-child {
+	color: var(--preview-hover);
+}
+
+.portus-header-admin__preview-nav .has-children::after {
+	width: 8px;
+	height: 8px;
+	margin-top: -3px;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	content: "";
+	transform: rotate(45deg);
+}
+
+.portus-header-admin__preview-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: calc(var(--preview-action-gap) + 4px);
+	margin-left: auto;
+}
+
+.portus-header-admin__preview-action {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	color: var(--preview-hover);
+	line-height: 1;
+}
+
+.portus-header-admin__preview-action svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+
+.portus-header-admin__preview-action--search {
+	color: var(--preview-search-icon);
+}
+
+.portus-header-admin__preview-action--account {
+	width: 22px;
+	height: 22px;
+	color: var(--preview-account-icon);
+}
+
+.portus-header-admin__preview-action--bag {
+	color: var(--preview-cart-icon);
+}
+
+.portus-header-admin__preview-action em {
+	position: absolute;
+	top: -7px;
+	right: -7px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 17px;
+	height: 17px;
+	padding: 0 4px;
+	border-radius: 999px;
+	background: var(--preview-cart-icon);
+	color: #00053a;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 1;
+}
+
+.portus-header-admin__preview-actions strong {
+	min-width: 140px;
+	padding: 14px 22px;
+	border-radius: var(--preview-radius);
+	background: var(--preview-cta-bg);
+	color: var(--preview-cta-text);
+	font-size: 15px;
+	font-weight: 800;
+	text-align: center;
+	box-shadow: 0 10px 18px rgb(0 0 0 / 14%);
+}
+
+.portus-header-admin__live-preview[data-preview-layout="cta"] .portus-header-admin__preview-actions strong {
+	padding-inline: 22px;
+	box-shadow: 0 14px 24px rgb(0 0 0 / 22%);
+}
+
+.portus-header-admin__preview-panels {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.portus-header-admin__preview-panels div {
+	padding: 14px;
+	border: 1px solid #dcdcde;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.portus-header-admin__preview-panels b,
+.portus-header-admin__preview-panels span {
+	display: block;
+}
+
+.portus-header-admin__preview-panels b {
+	color: #00053a;
+}
+
+.portus-header-admin__preview-panels span {
+	margin-top: 4px;
+	color: #646970;
+	font-size: 12px;
+}
+
+[data-portus-admin-section][hidden] {
+	display: none !important;
+}
+
+.portus-header-admin__card--warning {
+	border-left: 4px solid #dba617;
+}
+
+.portus-header-admin__card h2 {
+	margin-top: 0;
+}
+
+.portus-header-admin__grid,
+.portus-header-admin__colors,
+.portus-header-admin__numbers {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 22px;
+}
+
+.portus-header-admin__colors {
+	grid-template-columns: repeat(4, minmax(150px, 1fr));
+}
+
+.portus-header-admin__numbers {
+	grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.portus-header-admin__subheading {
+	padding-top: 22px;
+	margin-top: 26px;
+	border-top: 1px solid #dcdcde;
+}
+
+.portus-header-admin__field > label,
+.portus-header-admin__color-field > label {
+	display: block;
+	margin-bottom: 7px;
+	font-weight: 600;
+}
+
+.portus-header-admin__field select,
+.portus-header-admin__field input[type="text"],
+.portus-header-admin__field input[type="password"],
+.portus-header-admin__field input[type="url"] {
+	width: 100%;
+	max-width: 100%;
+}
+
+.portus-header-admin__check {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	margin: 18px 0 0;
+	font-weight: 600;
+}
+
+.portus-header-admin__check input {
+	margin-top: 1px;
+}
+
+.portus-header-admin__heading-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 18px;
+}
+
+.portus-header-admin__heading-row h2 {
+	margin-bottom: 0;
+}
+
+.portus-header-admin__restore-actions,
+.portus-header-admin__presets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.portus-header-admin__presets {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.portus-header-admin__preset {
+	padding: 16px;
+	border: 1px solid #dcdcde;
+	border-radius: 10px;
+	background: #fff;
+	color: #1d2327;
+	text-align: left;
+	cursor: pointer;
+	transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.portus-header-admin__preset strong,
+.portus-header-admin__preset span {
+	display: block;
+}
+
+.portus-header-admin__preset strong {
+	color: #00053a;
+	font-size: 14px;
+}
+
+.portus-header-admin__preset span {
+	margin-top: 6px;
+	color: #646970;
+	font-size: 12px;
+	line-height: 1.45;
+}
+
+.portus-header-admin__preset:hover,
+.portus-header-admin__preset:focus-visible {
+	border-color: #c0a821;
+	box-shadow: 0 12px 24px rgb(0 5 58 / 12%);
+	transform: translateY(-1px);
+}
+
+.portus-header-admin__color-field > div {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.portus-header-admin__number-field > label {
+	display: block;
+	margin-bottom: 7px;
+	font-weight: 600;
+}
+
+.portus-header-admin__number-field > div {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.portus-header-admin__number-field input {
+	width: 110px;
+}
+
+.portus-header-admin__color-field input[type="color"] {
+	width: 48px;
+	height: 38px;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.portus-header-admin__preview {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 120px;
+	padding: 12px;
+	margin-bottom: 10px;
+	border: 1px dashed #8c8f94;
+	border-radius: 6px;
+	background: #f6f7f7;
+}
+
+.portus-header-admin__preview[hidden] {
+	display: none;
+}
+
+.portus-header-admin__preview img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 94px;
+}
+
+.portus-header-admin__media .button-link-delete {
+	margin-left: 10px;
+}
+
+.portus-header-license-status {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 78px;
+	padding: 7px 12px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	color: #50575e;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 0.04em;
+}
+
+.portus-header-license-status--active {
+	background: #e7f7ed;
+	color: #147a38;
+}
+
+.portus-header-license-status--pending {
+	background: #fff6d8;
+	color: #8a5d00;
+}
+
+.portus-header-license-status--invalid,
+.portus-header-license-status--expired {
+	background: #fcebea;
+	color: #b32d2e;
+}
+
+.portus-header-license-summary,
+.portus-header-license-steps,
+.portus-header-license-action-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.portus-header-license-summary > div,
+.portus-header-license-steps > div,
+.portus-header-license-action-grid > form {
+	padding: 14px;
+	border: 1px solid #dcdcde;
+	border-radius: 10px;
+	background: #fbfbfc;
+}
+
+.portus-header-license-summary span,
+.portus-header-license-summary strong,
+.portus-header-license-steps strong,
+.portus-header-license-steps span {
+	display: block;
+}
+
+.portus-header-license-summary span,
+.portus-header-license-steps span {
+	color: #646970;
+	font-size: 12px;
+	line-height: 1.45;
+}
+
+.portus-header-license-summary strong,
+.portus-header-license-steps strong {
+	margin-top: 4px;
+	color: #00053a;
+}
+
+.portus-header-license-message {
+	padding: 12px 14px;
+	margin: 18px 0 0;
+	border-left: 4px solid #c0a821;
+	border-radius: 8px;
+	background: #fffaf0;
+	color: #00053a;
+	font-weight: 600;
+}
+
+.portus-header-license-actions {
+	border-color: #c0a821;
+}
+
+.portus-header-license-action-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portus-header-license-action-grid .button {
+	margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+	.portus-header-admin__toolbar {
+		top: 46px;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.portus-header-admin__colors {
+		grid-template-columns: repeat(2, minmax(150px, 1fr));
+	}
+
+	.portus-header-admin__presets {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.portus-header-admin__numbers {
+		grid-template-columns: repeat(2, minmax(180px, 1fr));
+	}
+
+	.portus-header-license-summary,
+	.portus-header-license-steps {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.portus-header-admin__grid,
+	.portus-header-admin__colors,
+	.portus-header-admin__numbers {
+		grid-template-columns: 1fr;
+	}
+
+	.portus-header-admin__heading-row {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.portus-header-admin__live-preview {
+		gap: 12px;
+		padding: 12px;
+	}
+
+	.portus-header-admin__preview-header {
+		display: flex !important;
+		gap: 12px;
+		min-height: 62px;
+		overflow-x: auto;
+	}
+
+	.portus-header-admin__preview-nav,
+	.portus-header-admin__preview-panels,
+	.portus-header-admin__preview-action {
+		display: none;
+	}
+
+	.portus-header-admin__presets,
+	.portus-header-admin__preview-panels {
+		grid-template-columns: 1fr;
+	}
+
+	.portus-header-license-summary,
+	.portus-header-license-steps,
+	.portus-header-license-action-grid {
+		grid-template-columns: 1fr;
+	}
+}

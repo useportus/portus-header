@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portus Header 2.3.3\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+
+#: portus-header.php
+msgid "Portus Header"
+msgstr ""
+
+#: admin/class-portus-header-admin.php
+msgid "Salvar configurações"
+msgstr ""
+
+#: admin/class-portus-header-admin.php
+msgid "Mega menu profissional"
+msgstr ""
+
+#: admin/class-portus-header-admin.php
+msgid "Header inteligente"
+msgstr ""
+
+#: templates/search-panel.php
+msgid "Pesquisar produtos"
+msgstr ""
+
+#: templates/search-panel.php
+msgid "Ver todos os resultados"
+msgstr ""
