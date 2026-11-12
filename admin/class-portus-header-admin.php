@@ -268,13 +268,13 @@ class Portus_Header_Admin {
 		update_option( 'portus_header_onboarding_pending', 0, false );
 		?>
 		<div class="wrap portus-header-admin portus-header-admin--<?php echo esc_attr( $is_pro ? 'pro' : 'free' ); ?>" data-portus-admin-edition="<?php echo esc_attr( $is_pro ? 'pro' : 'free' ); ?>">
-			<header class="portus-header-admin__brand">
-				<img class="portus-header-admin__brand-icon" src="<?php echo esc_url( PORTUS_HEADER_URL . 'assets/images/portus-header/icon-256x256.png' ); ?>" alt="<?php echo esc_attr__( 'Ícone do Portus Header', 'portus-header' ); ?>">
-				<div class="portus-header-admin__brand-content">
-					<div class="portus-header-admin__brand-title-row">
-						<h1><?php echo esc_html( $product_title ); ?></h1>
+			<header class="portus-header-admin__brand" style="display:flex;align-items:center;gap:12px;margin:20px 0;">
+				<img class="portus-header-admin__brand-icon" style="display:block;flex:0 0 44px;width:44px;height:44px;border-radius:10px;object-fit:contain;" src="<?php echo esc_url( PORTUS_HEADER_URL . 'assets/images/portus-header/icon-256x256.png' ); ?>" alt="<?php echo esc_attr__( 'Ícone do Portus Header', 'portus-header' ); ?>">
+				<div class="portus-header-admin__brand-content" style="min-width:0;">
+					<div class="portus-header-admin__brand-title-row" style="margin:0 0 2px;">
+						<h1 style="margin:0;color:#00053a;font-size:26px;line-height:1.25;"><?php echo esc_html( $product_title ); ?></h1>
 					</div>
-					<p class="portus-header-admin__intro">
+					<p class="portus-header-admin__intro" style="margin:0;">
 						<?php esc_html_e( 'Configure a exibição, identidade visual e comportamento do cabeçalho.', 'portus-header' ); ?>
 					</p>
 				</div>
