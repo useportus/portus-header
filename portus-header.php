@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Portus Header
  * Description:       Responsive WordPress header with native menus, logos, CTA, shortcode mode, automatic insertion, sticky option, and mobile drawer.
- * Version:           2.3.11
+ * Version:           2.3.12
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Portus
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PORTUS_HEADER_VERSION', '2.3.11' );
+define( 'PORTUS_HEADER_VERSION', '2.3.12' );
 define( 'PORTUS_HEADER_FILE', __FILE__ );
 define( 'PORTUS_HEADER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'PORTUS_HEADER_URL', plugin_dir_url( __FILE__ ) );

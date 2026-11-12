@@ -271,12 +271,8 @@ class Portus_Header_Admin {
 			<header class="portus-header-admin__brand">
 				<img class="portus-header-admin__brand-icon" src="<?php echo esc_url( PORTUS_HEADER_URL . 'assets/images/portus-header/icon-256x256.png' ); ?>" alt="<?php echo esc_attr__( 'Ícone do Portus Header', 'portus-header' ); ?>">
 				<div class="portus-header-admin__brand-content">
-					<p class="portus-header-admin__brand-eyebrow"><?php esc_html_e( 'PORTUS / WORDPRESS', 'portus-header' ); ?></p>
 					<div class="portus-header-admin__brand-title-row">
 						<h1><?php echo esc_html( $product_title ); ?></h1>
-						<?php if ( $is_pro ) : ?>
-							<span class="portus-header-admin__brand-badge"><?php esc_html_e( 'PRO', 'portus-header' ); ?></span>
-						<?php endif; ?>
 					</div>
 					<p class="portus-header-admin__intro">
 						<?php esc_html_e( 'Configure a exibição, identidade visual e comportamento do cabeçalho.', 'portus-header' ); ?>
