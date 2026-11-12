@@ -3,8 +3,96 @@
 }
 
 .portus-header-admin__intro {
-	max-width: 720px;
+	margin: 0;
 	font-size: 15px;
+	line-height: 1.6;
+	color: #50575e;
+}
+
+.portus-header-admin__brand {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 26px 32px;
+	margin: 20px 0 24px;
+	border: 1px solid #d9dce7;
+	border-radius: 18px;
+	background: #fff;
+	box-shadow: 0 12px 30px rgb(0 5 58 / 8%);
+}
+
+.portus-header-admin__brand-icon {
+	flex: 0 0 82px;
+	width: 82px;
+	height: 82px;
+	border-radius: 12px;
+	object-fit: contain;
+}
+
+.portus-header-admin__brand-content {
+	min-width: 0;
+}
+
+.portus-header-admin__brand-eyebrow {
+	margin: 0 0 7px;
+	color: #00053a;
+	font-size: 11px;
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+
+.portus-header-admin__brand-title-row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 13px;
+	margin-bottom: 6px;
+}
+
+.portus-header-admin__brand-title-row h1 {
+	margin: 0;
+	color: #00053a;
+	font-size: 32px;
+	line-height: 1.15;
+}
+
+.portus-header-admin__brand-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 30px;
+	padding: 0 11px;
+	border-radius: 999px;
+	background: #c0a821;
+	color: #00053a;
+	font-size: 11px;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+	.portus-header-admin__brand {
+		align-items: flex-start;
+		gap: 16px;
+		padding: 20px;
+		border-radius: 14px;
+	}
+
+	.portus-header-admin__brand-icon {
+		flex-basis: 58px;
+		width: 58px;
+		height: 58px;
+		border-radius: 10px;
+	}
+
+	.portus-header-admin__brand-title-row h1 {
+		font-size: 25px;
+	}
+
+	.portus-header-admin__brand-eyebrow {
+		font-size: 9px;
+		letter-spacing: 1.4px;
+	}
 }
 
 .portus-header-admin__card {
@@ -17,9 +105,6 @@
 }
 
 .portus-header-admin__toolbar {
-	position: sticky;
-	top: 32px;
-	z-index: 20;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

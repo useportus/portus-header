@@ -260,6 +260,7 @@ class Portus_Header_Admin {
 		$presets  = $this->get_visual_presets();
 		$is_pro   = $this->is_pro_edition();
 		$pro_tabs = $is_pro && class_exists( 'Portus_Header_Pro_Admin' ) ? Portus_Header_Pro_Admin::tabs() : array();
+		$product_title = $is_pro ? __( 'Portus Header Pro', 'portus-header' ) : __( 'Portus Header', 'portus-header' );
 			$preview_logo_id  = ! empty( $settings['desktop_logo_id'] ) ? absint( $settings['desktop_logo_id'] ) : 0;
 			$preview_logo_id  = ! $preview_logo_id && ! empty( $settings['mobile_logo_id'] ) ? absint( $settings['mobile_logo_id'] ) : $preview_logo_id;
 			$preview_logo_id  = ! $preview_logo_id ? absint( get_theme_mod( 'custom_logo' ) ) : $preview_logo_id;
@@ -267,10 +268,21 @@ class Portus_Header_Admin {
 		update_option( 'portus_header_onboarding_pending', 0, false );
 		?>
 		<div class="wrap portus-header-admin portus-header-admin--<?php echo esc_attr( $is_pro ? 'pro' : 'free' ); ?>" data-portus-admin-edition="<?php echo esc_attr( $is_pro ? 'pro' : 'free' ); ?>">
-			<h1><?php esc_html_e( 'Portus Header', 'portus-header' ); ?></h1>
-			<p class="portus-header-admin__intro">
-				<?php esc_html_e( 'Configure a exibição, identidade visual e comportamento do cabeçalho.', 'portus-header' ); ?>
-			</p>
+			<header class="portus-header-admin__brand">
+				<img class="portus-header-admin__brand-icon" src="<?php echo esc_url( PORTUS_HEADER_URL . 'assets/images/portus-header/icon-256x256.png' ); ?>" alt="<?php echo esc_attr__( 'Ícone do Portus Header', 'portus-header' ); ?>">
+				<div class="portus-header-admin__brand-content">
+					<p class="portus-header-admin__brand-eyebrow"><?php esc_html_e( 'PORTUS / WORDPRESS', 'portus-header' ); ?></p>
+					<div class="portus-header-admin__brand-title-row">
+						<h1><?php echo esc_html( $product_title ); ?></h1>
+						<?php if ( $is_pro ) : ?>
+							<span class="portus-header-admin__brand-badge"><?php esc_html_e( 'PRO', 'portus-header' ); ?></span>
+						<?php endif; ?>
+					</div>
+					<p class="portus-header-admin__intro">
+						<?php esc_html_e( 'Configure a exibição, identidade visual e comportamento do cabeçalho.', 'portus-header' ); ?>
+					</p>
+				</div>
+			</header>
 
 			<?php settings_errors(); ?>
 

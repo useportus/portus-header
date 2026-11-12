@@ -4,7 +4,7 @@ Tags: header, navigation, menu, responsive, shortcode
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.10
+Stable tag: 2.3.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,10 @@ No. The original theme header is hidden only when you explicitly enable that set
 No. Those features are reserved for the Pro edition.
 
 == Changelog ==
+
+= 2.3.11 =
+* Adds the Portus Header product identity to the settings screen, with the official icon and responsive product heading.
+* Removes the fixed behavior from the settings navigation so it scrolls normally on desktop and mobile.
 
 = 2.3.10 =
 * Makes page inclusion and exclusion rules available in the Free edition.
